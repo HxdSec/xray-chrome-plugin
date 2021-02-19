@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>popup</title>
+	<style>
+		ul {
+			display: block;
+			list-style-type: disc;
+			-webkit-margin-before: 0;
+			-webkit-margin-after: 0;
+			-webkit-margin-start: 0px;
+			-webkit-margin-end: 0px;
+			-webkit-padding-start: 0;
+		}
+
+		.clearfix {
+			clear: both;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		p {
+			line-height: 25px;
+			color: #333;
+		}
+
+		body {
+			width: 600px;
+			min-height: 500px;
+		}
+
+		.logo {
+			width: 48px;
+			height: 48px;
+			margin: 0 auto;
+			display: block;
+			margin-top: 10px;
+		}
+
+		.version {
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			font-size: 14px;
+			color: #333;
+			border-bottom: 1px solid #e9eaea;
+			display: block;
+		}
+
+		.menu {
+			width: 120px;
+			float: left;
+			height: 450px;
+			border-right: 1px solid #e9eaea;
+			margin-top: 10px;
+		}
+
+		.menu li a {
+			display: block;
+			width: 100%;
+			height: 30px;
+			font-size: 12px;
+			color: #333;
+			text-align: center;
+			line-height: 30px;
+			text-decoration: none;
+		}
+
+		.menu li.on a {
+			border-right: 2px solid #06b92d;
+		}
+
+		.tab {
+			width: 450px;
+			float: left;
+			margin-left: 20px;
+			margin-top: 10px;
+			min-height: 450px;
+		}
+
+		.phone-list {
+			margin-top: 20px;
+			float: left;
+		}
+
+		.phone-list li {
+			width: 130px;
+			height: 30px;
+			padding-left: 5px;
+			margin-top: 5px;
+			line-height: 30px;
+			float: left;
+			font-size: 12px;
+			color: #333;
+			border-bottom: 1px solid #e9eaea;
+			border-left: 1px solid #e9eaea;
+			margin-right: 10px;
+		}
+
+		.phone-list li span {
+			float: right;
+		}
+
+		.robot-list {
+			margin-top: 20px;
+			float: left;
+		}
+
+		.robot-list li {
+			width: 420px;
+			height: 30px;
+			padding-left: 5px;
+			margin-top: 5px;
+			line-height: 30px;
+			float: left;
+			font-size: 12px;
+			color: #333;
+			border-bottom: 1px solid #e9eaea;
+			border-left: 1px solid #e9eaea;
+			margin-right: 10px;
+		}
+
+		.robot-list li span {
+			float: right;
+			color: #333
+		}
+
+		.robot-list li span:hover {
+			float: right;
+			color: #06b92d;
+			cursor: pointer;
+		}
+
+		.btn {
+			float: left;
+			margin-right: 10px;
+			padding: 0 20px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			font-size: 12px;
+			color: #999;
+			border: 1px solid #e9eaea;
+			display: block;
+			text-decoration: none;
+			border-radius: 3px;
+			margin-top: 10px;
+			transition: all 0.3s linear;
+		}
+
+		.btn:hover {
+			color: #333;
+			border: 1px solid #333;
+			transition: all 0.3s linear;
+		}
+
+		.input {
+			width: 280px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 12px;
+			color: #999;
+			border: 1px solid #e9eaea;
+			display: block;
+			border-radius: 3px;
+			margin-top: 10px;
+			padding: 0 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<image src="images/icon_48.png" class="logo"></image>
+	<span class="version">Version: 1.0.0 By Hxd Sec 茴香豆安全</span>
+
+	<ul class="menu">
+		<li><a href="javascript:;">导出IP列表</a></li>
+		<li><a href="javascript:;">简介与帮助</a></li>
+	</ul>
+	<div class="tab">
+		<div class="tab-content">
+			<a href="javascript:;" class="btn btn-clear" style="margin-bottom: 10px;">全部清空</a>
+			<a href="javascript:;" class="btn btn-copy" style="margin-bottom: 10px;">复制到剪贴板</a>
+			<textarea id="url-content" class="input" style="width:430px;height:380px;line-height: 20px;"></textarea>
+
+		</div>
+		<div class="tab-content" style="display:none;">
+			<p>
+				<b>使用说明：</b><br />
+				1.解决X-Ray扫描结果web站点，点击总是进入详情的问题，新增打开按钮 <br />
+				2.新增批量导出Web站点url的功能，导出后直接发送到插件<br />
+				3.批量导出的时候建议把分页数调整到最大，因为插件只会抓取界面上的数据<br />
+			</p>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+</body>
+
+</html>
